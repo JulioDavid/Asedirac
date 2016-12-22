@@ -1,7 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Login</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSRF Token -->
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>Asesor&iacute;asDirac</title>
+
+    <!-- Styles -->
+    <link href="/css/app.css" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script>
+        window.Laravel = <?php echo json_encode([
+            'csrfToken' => csrf_token(),
+        ]); ?>
+    </script>
 </head>
 <body>
 	<form action="{{url('/login')}}" method="post">
@@ -27,5 +44,8 @@
             <input type="checkbox" name="remember"> Remember Me
         </label>
 	</form>
+	
+    <!-- Scripts -->
+    <script src="/js/app.js"></script>
 </body>
 </html>
