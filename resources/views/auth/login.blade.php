@@ -54,7 +54,7 @@
 
         @if (count($errors) > 0)
             <div class="alert alert-danger">
-                <strong>Whoops!</strong> {{ trans('adminlte_lang::message.someproblems') }}<br><br>
+                <strong>Whoops!</strong> Hay algunos problemas<br><br>
                 <ul>
                     @foreach ($errors->all() as $error)
                         <li>{{ $error }}</li>
@@ -70,7 +70,7 @@
                   <label for="inputEmail3" class="control-label"></label>
                 </div>
                 <div class="col-sm-10">
-                  <input type="email" class="form-control input-lg"  placeholder="USUARIO/CORREO" name="email">
+                  <input type="email" class="form-control input-lg"  placeholder="USUARIO/CORREO" name="email" required>
                 </div>
               </div>
               <br>
@@ -79,7 +79,7 @@
                   <label for="inputPassword3" class="control-label"></label>
                 </div>
                 <div class="col-sm-10">
-                  <input type="password" class="form-control input-lg"  placeholder="CONTRASEÑA" name="password">
+                  <input type="password" class="form-control input-lg"  placeholder="CONTRASEÑA" name="password" required>
                 </div>
               </div>
               <br>

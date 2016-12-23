@@ -208,8 +208,17 @@ desired effect
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
-                <div class="pull-right">
-                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                <div class="pull-right">                  
+                  <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
+                     onclick="event.preventDefault();
+                               document.getElementById('logout-form').submit();">
+                      Salir
+                  </a>
+
+                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                      {{ csrf_field() }}
+                      <input type="submit" value="logout" style="display: none;">
+                  </form>
                 </div>
               </li>
             </ul>
@@ -257,18 +266,15 @@ desired effect
         <li class="header">HEADER</li>
         <!-- Optionally, you can add icons to the links -->
         <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-        <li><a href="#"><i class="fa fa-link"></i> <span>Another Link</span></a></li>
-        <li class="treeview">
-          <a href="#"><i class="fa fa-link"></i> <span>Multilevel</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="#">Link in level 2</a></li>
-            <li><a href="#">Link in level 2</a></li>
-          </ul>
-        </li>
+
+            @if(Auth::user()->rol == 0)
+                @include('vistasAlumnos.sidebarAlumno')
+            @elseif(Auth::user()->rol==1)
+                @include('vistasAsesor.sidebarAsesor')
+            @elseif(Auth::user()->rol==2)
+                @include('vistasAdmin.sidebarAdmin')
+            @endif
+ 
       </ul>
       <!-- /.sidebar-menu -->
     </section>
@@ -289,8 +295,11 @@ desired effect
       </ol>
     </section>
 
+    @include('loading')
+
     <!-- Main content -->
-    <section class="content">
+    <section class="content" id="contenido_principal">
+
 
       <!-- Your Page Content Here -->
 
@@ -396,6 +405,8 @@ desired effect
 <script src="{{asset('bootstrap/js/bootstrap.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('dist/js/app.min.js')}}"></script>
+
+<script src="{{asset('js/dirac.js')}}"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

@@ -18,3 +18,21 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+
+
+// rutas para nueva asesoria
+Route::get('form_nueva_asesoria', 'AsesoriasController@getNuevaAsesoria');
+Route::post('nueva_asesoria', 'AsesoriasController@nueva_asesoria');
+
+
+//rutas para opciones de asesoria. Sidebar->Mis asesorias
+Route::get('asesorias/solicitadas/{page?}', 'AsesoriasController@getSolicitadas');
+Route::get('asesorias/por_pagar', 'AsesoriasController@gePorPagar');
+Route::get('asesorias/concretadas','AsesoriasController@getConcretadas');
+
+Route::get('form_editar_usuario/{id}','UsuariosController@form_editar_usuario');
+Route::post('editar_usuario','UsuariosController@editar_usuario');
+
+Route::get('form_foto_perfil','UsuariosController@form_foto_perfil');
+Route::post('subir_foto_perfil','UsuariosController@subirImagen');
