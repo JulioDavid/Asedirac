@@ -24,7 +24,7 @@
       </div>
 
       <div class="form-group col-xs-6"> 
-        <label for="materia">Materia</label>
+        <label for="materia">materia</label>
         <input type="text" class="form-control" name="materia" id="materia" placeholder="Geometr&iacute;a anal&iacute;tica, &Aacute;lgebra ...">
       </div>
 
@@ -33,6 +33,7 @@
         <select name="modalidad">
           <option value="0">A domicilio</option>
           <option value="1">En l&iacute;nea</option>
+          <option value="2">Lugar a convenir</option> 
         </select>
       </div>
 
