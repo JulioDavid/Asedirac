@@ -8,9 +8,16 @@ use App\Asesoria;
 use App\Area;
 
 class AsesoriasController extends Controller
-{
+{   
+    private $modalidad;
+    private $paginacion;
+    
+
     public function __construct(){
     	$this->middleware('auth');
+        $this->modalidad = array("A domicilio","En línea","Lugar a convenir");
+        $this->paginacion = 2;
+
     }
 
     /**
@@ -35,6 +42,7 @@ class AsesoriasController extends Controller
     	$asesoria->fecha           = date("Y-m-d H:i:s",strtotime($data['fecha']));
     	$asesoria->horas           = $data['horas'];
     	$asesoria->alumno_id       = Auth::id();
+        $asesoria->modalidad       = $data['modalidad'];
 
     	$result = $asesoria->save();
 
@@ -57,15 +65,27 @@ class AsesoriasController extends Controller
     * Regresa todas las asesorias solicitadas por el usuario   
     **/
     public function getSolicitadas(){
+        $solicitadas = "";
+        $estatus = 0;
 
-        $solicitadas = Asesoria::where('alumno_id',Auth::id())
-                        ->where('estatus',0)
-                        ->paginate(2);
+        if(Auth::user()->rol == 0){
+            $solicitadas = Asesoria::where('alumno_id',Auth::id())
+                        ->where('estatus',$estatus)
+                        ->paginate($this->paginacion);
+        }
 
-        return view('asesorias.listado_asesorias')
-                    ->with('title','Asesor&iacute;as solicitadas')
-                    ->with('estatus',0)
-                    ->with('asesorias',$solicitadas);
+        if(Auth::user()->rol == 1){
+            $solicitadas = Asesoria::where('estatus',$estatus)
+                            ->paginate($this->paginacion);
+        }
+
+        if(Auth::user()->rol == 2){
+            $solicitadas = Asesoria::where('estatus',$estatus)
+                            ->paginate($this->paginacion);   
+        }
+
+
+        return($this->enviarListadoAsesorias($estatus,"Asesor&iacute;as solicitadas",$solicitadas));
     }
 
     /**
@@ -73,14 +93,27 @@ class AsesoriasController extends Controller
     * El asesor ha sido asignado pero no ha pagado
     **/
     public function getPorPagar(){
-        $porPagar = Asesoria::where('alumno_id',Auth::id())
-                ->where('estatus',1)
-                ->paginate(2);
+        $porPagar = "";
+        $estatus = 1;
 
-        return view('asesorias.listado_asesorias')
-                    ->with('title','Asesor&iacute;as pendientes')
-                    ->with('estatus',1)
-                    ->with('asesorias',$porPagar);
+        if(Auth::user()->rol == 0){
+            $porPagar = Asesoria::where('alumno_id',Auth::id())
+                ->where('estatus',$estatus)
+                ->paginate($this->paginacion);
+        }
+
+        if(Auth::user()->rol == 1){
+            $porPagar = Asesoria::where('asesor_id',Auth::id())
+                ->where('estatus',$estatus)
+                ->paginate($this->paginacion);
+        }
+
+        if(Auth::user()->rol == 2){
+            $porPagar = Asesoria::where('estatus',$estatus)
+                ->paginate($this->paginacion);
+        }
+
+        return($this->enviarListadoAsesorias($estatus,"Asesor&iacute;as pendientes",$porPagar));
     }
 
     /**
@@ -88,13 +121,38 @@ class AsesoriasController extends Controller
     * Se asignó el asesor y el cliente ya pagó
     **/
     public function getConcretadas(){
-        $concretadas = Asesoria::where('alumno_id',Auth::id())
-                ->where('estatus',2)
-                ->paginate(2);
+        $concretadas = "";
+        $estatus = 2;
 
+        if(Auth::user()->rol == 0){
+            $concretadas = Asesoria::where('alumno_id',Auth::id())
+                ->where('estatus',$estatus)
+                ->paginate($this->paginacion);
+        }
+
+        if(Auth::user()->rol == 1){
+            $concretadas = Asesoria::where('asesor_id',Auth::id())
+                ->where('estatus',$estatus)
+                ->paginate($this->paginacion);
+        }
+
+        if(Auth::user()->rol == 2){
+            $concretadas = Asesoria::where('estatus',$estatus)
+                ->paginate($this->paginacion);
+        }
+
+        return($this->enviarListadoAsesorias($estatus,"Asesor&iacute;as concretadas",$concretadas));
+    }
+
+    /**
+    * Funcion para mostrar el listado de las asesorias
+    **/
+    private function enviarListadoAsesorias($estatus,$titulo,$datos){
         return view('asesorias.listado_asesorias')
-                    ->with('title','Asesor&iacute;as concretadas')
-                    ->with('estatus',2)
-                    ->with('asesorias',$concretadas);
+                    ->with('title',$titulo)
+                    ->with('estatus',$estatus)
+                    ->with('asesorias',$datos)
+                    ->with('modalidad',$this->modalidad)
+                    ->with('rol',Auth::user()->rol);                    
     }
 }

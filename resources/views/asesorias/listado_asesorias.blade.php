@@ -14,13 +14,19 @@
        
         <thead>
             <tr>
-             <th style="width:10px">Id</th>
+                <th style="width:10px">Id</th>
                 <th>Fecha</th>
                 <th>Materia</th>
                 <th>Modalidad</th>
                 <th>Descripci&oacute;n</th>
-                <th>Precio</th>      
-                <th>Estado</th>
+                <th>Precio</th>
+                <th>Acci&oacute;n</th>
+
+                @if($estatus == 0 && $rol ==1) <th>Aceptar</th> @endif
+
+                @if($estatus==1 && $rol == 0) <th>Pago</th> @endif
+
+                @if($rol==2) <th>Estado</th> @endif
             </tr>
         </thead>
  
@@ -34,9 +40,16 @@
     <td>{{ $asesoria->id }}</td>
     <td>{{ $asesoria->fecha }}</td>
     <td>{{$asesoria->materia}}</td>
+    <td>{{$modalidad[$asesoria->modalidad]}}
     <td>{{$asesoria->descripcion}}</td>
     <td>{{$asesoria->precio}}</td>
-    <td>{{$asesoria->estatus}}</td>    
+    <td><button>Ver</button></td>
+
+    @if($estatus == 0 && $rol ==1) <td><button>Confirmar</button></td> @endif
+
+    @if($estatus==1 && $rol == 0) <td><button>Pagar</button></td> @endif
+
+    @if($rol==2) <td>{{$asesoria->estatus}}</td> @endif    
 </tr>
 
 @endforeach
