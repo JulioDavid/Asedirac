@@ -58,12 +58,14 @@ class AsesoriasController extends Controller
     **/
     public function getSolicitadas(){
 
-        $solicitadas = Asesoria::where('alumno_id',Auth::id())->paginate(2);
+        $solicitadas = Asesoria::where('alumno_id',Auth::id())
+                        ->where('estatus',0)
+                        ->paginate(2);
 
         return view('asesorias.listado_asesorias')
                     ->with('title','Asesor&iacute;as solicitadas')
+                    ->with('estatus',0)
                     ->with('asesorias',$solicitadas);
-
     }
 
     /**

@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-
+<!--
+This is a starter template page. Use this page to start your new project from
+scratch. This page gets rid of all links and provides the needed markup only.
+-->
 <html>
 @include('htmlheader')
 <!--
@@ -31,9 +34,9 @@ desired effect
     <!-- Logo -->
     <a href="index2.html" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>A</b>LT</span>
+      <span class="logo-mini"><b>A</b>D</span>
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>Admin</b>LTE</span>
+      <span class="logo-lg"><b>Asesor&iacute;as</b>Dirac</span>
     </a>
 
     <!-- Header Navbar -->
@@ -61,7 +64,7 @@ desired effect
                     <a href="#">
                       <div class="pull-left">
                         <!-- User Image -->
-                        <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                       </div>
                       <!-- Message title and timestamp -->
                       <h4>
@@ -145,14 +148,14 @@ desired effect
             <!-- Menu Toggle Button -->
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
               <!-- The user image in the navbar-->
-              <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="user-image" alt="User Image">
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
               <!-- hidden-xs hides the username on small devices so only the image appears. -->
               <span class="hidden-xs">Alexander Pierce</span>
             </a>
             <ul class="dropdown-menu">
               <!-- The user image in the menu -->
               <li class="user-header">
-                <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                 <p>
                   Alexander Pierce - Web Developer
@@ -179,17 +182,8 @@ desired effect
                 <div class="pull-left">
                   <a href="#" class="btn btn-default btn-flat">Profile</a>
                 </div>
-                <div class="pull-right">                  
-                  <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
-                     onclick="event.preventDefault();
-                               document.getElementById('logout-form').submit();">
-                      Salir
-                  </a>
-
-                  <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                      {{ csrf_field() }}
-                      <input type="submit" value="logout" style="display: none;">
-                  </form>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
                 </div>
               </li>
             </ul>
@@ -211,7 +205,7 @@ desired effect
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="{{asset('dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>Alexander Pierce</p>
@@ -233,20 +227,7 @@ desired effect
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
-      <ul class="sidebar-menu">
-        <li class="header">HEADER</li>
-        <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="#"><i class="fa fa-link"></i> <span>Link</span></a></li>
-
-            @if(Auth::user()->rol == 0)
-                @include('vistasAlumnos.sidebarAlumno')
-            @elseif(Auth::user()->rol==1)
-                @include('vistasAsesor.sidebarAsesor')
-            @elseif(Auth::user()->rol==2)
-                @include('vistasAdmin.sidebarAdmin')
-            @endif
- 
-      </ul>
+        @include('sidebarmenu')
       <!-- /.sidebar-menu -->
     </section>
     <!-- /.sidebar -->
@@ -266,11 +247,8 @@ desired effect
       </ol>
     </section>
 
-    @include('loading')
-
     <!-- Main content -->
-    <section class="content" id="contenido_principal">
-
+    <section class="content">
 
       <!-- Your Page Content Here -->
 
@@ -368,7 +346,7 @@ desired effect
 </div>
 <!-- ./wrapper -->
 
+<!-- REQUIRED JS SCRIPTS -->
 @include('scripts')
-
 </body>
 </html>
