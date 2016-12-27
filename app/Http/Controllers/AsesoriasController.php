@@ -67,20 +67,24 @@ class AsesoriasController extends Controller
     public function getSolicitadas(){
         $solicitadas = "";
         $estatus = 0;
+        $rol = Auth::user()->rol;
 
-        if(Auth::user()->rol == 0){
+        if($rol == 0){
             $solicitadas = Asesoria::where('alumno_id',Auth::id())
                         ->where('estatus',$estatus)
+                        ->whereDate('fecha','>=',date("Y-m-d H:i:s"))
                         ->paginate($this->paginacion);
         }
 
-        if(Auth::user()->rol == 1){
+        if($rol == 1){
             $solicitadas = Asesoria::where('estatus',$estatus)
+                            ->whereDate('fecha','>=',date("Y-m-d H:i:s"))
                             ->paginate($this->paginacion);
         }
 
-        if(Auth::user()->rol == 2){
+        if($rol == 2){
             $solicitadas = Asesoria::where('estatus',$estatus)
+                            ->whereDate('fecha','>=',date("Y-m-d H:i:s"))
                             ->paginate($this->paginacion);   
         }
 
@@ -95,20 +99,21 @@ class AsesoriasController extends Controller
     public function getPorPagar(){
         $porPagar = "";
         $estatus = 1;
+        $rol = Auth::user()->rol;
 
-        if(Auth::user()->rol == 0){
+        if($rol == 0){
             $porPagar = Asesoria::where('alumno_id',Auth::id())
                 ->where('estatus',$estatus)
                 ->paginate($this->paginacion);
         }
 
-        if(Auth::user()->rol == 1){
+        if($rol == 1){
             $porPagar = Asesoria::where('asesor_id',Auth::id())
                 ->where('estatus',$estatus)
                 ->paginate($this->paginacion);
         }
 
-        if(Auth::user()->rol == 2){
+        if($rol == 2){
             $porPagar = Asesoria::where('estatus',$estatus)
                 ->paginate($this->paginacion);
         }
@@ -123,25 +128,54 @@ class AsesoriasController extends Controller
     public function getConcretadas(){
         $concretadas = "";
         $estatus = 2;
+        $rol = Auth::user()->rol;
 
-        if(Auth::user()->rol == 0){
+        if($rol == 0){
             $concretadas = Asesoria::where('alumno_id',Auth::id())
                 ->where('estatus',$estatus)
                 ->paginate($this->paginacion);
         }
 
-        if(Auth::user()->rol == 1){
+        if($rol == 1){
             $concretadas = Asesoria::where('asesor_id',Auth::id())
                 ->where('estatus',$estatus)
                 ->paginate($this->paginacion);
         }
 
-        if(Auth::user()->rol == 2){
+        if($rol == 2){
             $concretadas = Asesoria::where('estatus',$estatus)
                 ->paginate($this->paginacion);
         }
 
         return($this->enviarListadoAsesorias($estatus,"Asesor&iacute;as concretadas",$concretadas));
+    }
+
+    /**
+    * regresa las asesorias que ya pasaron
+    **/
+    public function getConcluidas(){
+        $concluidas ="";
+        $estatus = 3;
+        $rol = Auth::user()->rol;
+
+        if($rol == 0){
+            $concluidas = Asesoria::where('alumno_id',Auth::id())
+                ->whereDate('fecha','<',date("Y-m-d H:i:s"))
+                ->paginate($this->paginacion);
+        }
+
+        if($rol == 1){
+            $concluidas = Asesoria::where('asesor_id',Auth::id())
+                ->whereDate('fecha','<',date("Y-m-d H:i:s"))
+                ->paginate($this->paginacion);
+        }
+
+        if($rol == 2){
+            $concluidas = Asesoria::whereDate('fecha','<',date("Y-m-d H:i:s"))
+                ->paginate($this->paginacion);
+        }
+
+        return($this->enviarListadoAsesorias($estatus,"Asesor&iacute;as concluidas",$concluidas));
     }
 
     /**
