@@ -12,7 +12,7 @@
     <ul class="treeview-menu">
         <li><a href="javascript:void(0);" onclick="cargarlistado(0);">Solicitadas</a></li>
         <li><a href="javascript:void(0);" onclick="cargarlistado(1);">Por pagar</a></li>
-        <li><a href="javascript:void(0);" onclick="cargarlistado(0);">Concretadas</a></li>
+        <li><a href="javascript:void(0);" onclick="cargarlistado(2);">Concretadas</a></li>
     </ul>
     </li>
 

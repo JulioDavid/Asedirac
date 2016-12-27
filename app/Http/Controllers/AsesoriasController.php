@@ -73,14 +73,14 @@ class AsesoriasController extends Controller
     * El asesor ha sido asignado pero no ha pagado
     **/
     public function getPorPagar(){
-        $solicitadas = Asesoria::where('alumno_id',Auth::id())
+        $porPagar = Asesoria::where('alumno_id',Auth::id())
                 ->where('estatus',1)
                 ->paginate(2);
 
         return view('asesorias.listado_asesorias')
                     ->with('title','Asesor&iacute;as pendientes')
                     ->with('estatus',1)
-                    ->with('asesorias',$solicitadas);
+                    ->with('asesorias',$porPagar);
     }
 
     /**
@@ -88,6 +88,13 @@ class AsesoriasController extends Controller
     * Se asignó el asesor y el cliente ya pagó
     **/
     public function getConcretadas(){
+        $concretadas = Asesoria::where('alumno_id',Auth::id())
+                ->where('estatus',2)
+                ->paginate(2);
 
+        return view('asesorias.listado_asesorias')
+                    ->with('title','Asesor&iacute;as concretadas')
+                    ->with('estatus',2)
+                    ->with('asesorias',$concretadas);
     }
 }
