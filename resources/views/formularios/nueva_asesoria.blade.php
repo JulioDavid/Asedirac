@@ -24,7 +24,7 @@
       </div>
 
       <div class="form-group col-xs-6"> 
-        <label for="materia">materia</label>
+        <label for="materia">Materia</label>
         <input type="text" class="form-control" name="materia" id="materia" placeholder="Geometr&iacute;a anal&iacute;tica, &Aacute;lgebra ...">
       </div>
 

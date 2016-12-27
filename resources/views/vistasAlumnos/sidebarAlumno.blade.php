@@ -1,10 +1,10 @@
 
 
-    <li><a href="javascript:void(0);" onclick="cargarformulario(1);" ><i class="fa fa-circle-o"></i><span>Nueva asesor&iacute;a</span></a>
+    <li><a href="javascript:void(0);" onclick="cargarformulario(1);" ><i class="fa fa-plus"></i><span>Nueva asesor&iacute;a</span></a>
     </li>
 
     <li class="treeview">
-      <a href="#"><i class="fa fa-link"></i> <span>Mis Asesor&iacute;as</span>
+      <a href="#"><i class="fa fa-book"></i> <span>Mis Asesor&iacute;as</span>
         <span class="pull-right-container">
           <i class="fa fa-angle-left pull-right"></i>
       </span>

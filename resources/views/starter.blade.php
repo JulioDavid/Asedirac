@@ -105,6 +105,8 @@
                 -webkit-transform: translateY(0%);
             }
         }
+
+      
     </style>
   </head><body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
     <nav class="navbar navbar-fixed-top">
