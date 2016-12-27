@@ -18,8 +18,9 @@ function cargarformulario(arg){
 
 function cargarlistado(listado){
     //funcion para cargar los diferentes listados en general
-
-if(listado==0){ var url = "asesorias/solicitadas"; }
+var url = "asesorias/solicitadas";
+if(listado==1){ url = "asesorias/por_pagar"; }
+if(listado==0){ url = "asesorias/solicitadas"; }
 $("#contenido_principal").html($("#loading_section").html());
     
     $.get(url,function(resul){

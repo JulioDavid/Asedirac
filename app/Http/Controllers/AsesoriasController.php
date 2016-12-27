@@ -73,7 +73,14 @@ class AsesoriasController extends Controller
     * El asesor ha sido asignado pero no ha pagado
     **/
     public function getPorPagar(){
+        $solicitadas = Asesoria::where('alumno_id',Auth::id())
+                ->where('estatus',1)
+                ->paginate(2);
 
+        return view('asesorias.listado_asesorias')
+                    ->with('title','Asesor&iacute;as pendientes')
+                    ->with('estatus',1)
+                    ->with('asesorias',$solicitadas);
     }
 
     /**

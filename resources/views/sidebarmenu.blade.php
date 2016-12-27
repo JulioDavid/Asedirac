@@ -14,4 +14,11 @@
             <li><a href="#">Link in level 2</a></li>
           </ul>
         </li>
+        @if(Auth::user()->rol == 0)
+            @include('vistasAlumnos.sidebarAlumno')
+        @elseif(Auth::user()->rol==1)
+            @include('vistasAsesor.sidebarAsesor')
+        @elseif(Auth::user()->rol==2)
+            @include('vistasAdmin.sidebarAdmin')
+        @endif
       </ul>

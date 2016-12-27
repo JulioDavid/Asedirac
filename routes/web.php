@@ -28,7 +28,7 @@ Route::post('nueva_asesoria', 'AsesoriasController@nueva_asesoria');
 
 //rutas para opciones de asesoria. Sidebar->Mis asesorias
 Route::get('asesorias/solicitadas/{page?}', 'AsesoriasController@getSolicitadas');
-Route::get('asesorias/por_pagar', 'AsesoriasController@gePorPagar');
+Route::get('asesorias/por_pagar/{page?}', 'AsesoriasController@getPorPagar');
 Route::get('asesorias/concretadas','AsesoriasController@getConcretadas');
 
 Route::get('form_editar_usuario/{id}','UsuariosController@form_editar_usuario');
