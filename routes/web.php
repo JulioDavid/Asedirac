@@ -34,6 +34,7 @@ Route::get('asesorias/concluidas/{page?}', 'AsesoriasController@getConcluidas');
 
 Route::post('asesorias/confirmar','AsesoriasController@postConfirmarAsesoria');
 
+//Rutas para usuario
 Route::get('form_editar_usuario/{id}','UsuariosController@form_editar_usuario');
 Route::post('editar_usuario','UsuariosController@editar_usuario');
 
