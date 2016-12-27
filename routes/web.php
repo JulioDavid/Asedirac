@@ -38,5 +38,9 @@ Route::post('asesorias/confirmar','AsesoriasController@postConfirmarAsesoria');
 Route::get('form_editar_usuario/{id}','UsuariosController@form_editar_usuario');
 Route::post('editar_usuario','UsuariosController@editar_usuario');
 
+Route::get('usuarios/alumnos/{id?}','UsuariosController@getAlumnos');
+Route::get('usuarios/asesores/{id?}','UsuariosController@getAsesores');
+
+
 Route::get('form_foto_perfil','UsuariosController@form_foto_perfil');
 Route::post('subir_foto_perfil','UsuariosController@subirImagen');

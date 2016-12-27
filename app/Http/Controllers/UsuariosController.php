@@ -143,4 +143,13 @@ class UsuariosController extends Controller
       }
    }
 
+
+   public function getAlumnos(){
+
+   }
+
+   public function getAsesores(){
+    
+   }
+
 }

@@ -21,10 +21,10 @@ class CreateAsesoriasTable extends Migration
             $table->string('materia')->nullable();
             $table->string('descripcion')->nullable();
             $table->dateTime('fecha');
-            $table->unsignedSmallInteger('semanas')->nullable();
-            $table->unsignedSmallInteger('meses')->nullable();
-            $table->unsignedSmallInteger('rating')->nullable();
-            $table->float('precio',5,2)->nullable();
+            $table->unsignedSmallInteger('semanas')->default(0);
+            $table->unsignedSmallInteger('meses')->default(0);
+            $table->unsignedSmallInteger('rating')->default(0);
+            $table->float('precio',5,2)->default(0);
             $table->unsignedSmallInteger('horas')->default(2);
             $table->integer('descuento')->default(0);
             /**
