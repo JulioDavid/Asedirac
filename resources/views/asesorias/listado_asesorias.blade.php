@@ -16,6 +16,7 @@
             <tr>
                 <th style="width:10px">Id</th>
                 <th>Fecha</th>
+                <th>Id Alumno</th>
                 <th>Materia</th>
                 <th>Modalidad</th>
                 <th>Descripci&oacute;n</th>
@@ -39,13 +40,18 @@
  <tr role="row" class="odd">
     <td>{{ $asesoria->id }}</td>
     <td>{{ $asesoria->fecha }}</td>
+    <td>{{ $asesoria->alumno_id}}</td>
     <td>{{$asesoria->materia}}</td>
     <td>{{$modalidad[$asesoria->modalidad]}}
     <td>{{$asesoria->descripcion}}</td>
     <td>{{$asesoria->precio}}</td>
     <td><button>Ver</button></td>
 
-    @if($estatus == 0 && $rol ==1) <td><button>Confirmar</button></td> @endif
+    @if($estatus == 0 && $rol ==1) 
+    <td>
+    <button onclick="confirmarAsesoria({{$asesoria->id}});">Confirmar</button>
+    </td> 
+    @endif
 
     @if($estatus==1 && $rol == 0) <td><button>Pagar</button></td> @endif
 
@@ -74,6 +80,12 @@ echo str_replace('/?', '?', $asesorias->render() )  ;
 @endif
 
 </div>
+
+<form class="form_entrada" id="confirmar_form" action="{{ url('/asesorias/confirmar') }}" method="POST" style="display: none;">
+    {{ csrf_field() }}
+    <input type="number" name="id_asesoria" id="id_asesoria">
+    <input type="submit" value="confirmar" style="display: none;">
+</form>
 
 
 

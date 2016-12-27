@@ -189,4 +189,37 @@ class AsesoriasController extends Controller
                     ->with('modalidad',$this->modalidad)
                     ->with('rol',Auth::user()->rol);                    
     }
+
+    public function postConfirmarAsesoria(Request $request){
+        if(Auth::user()->rol == 1){
+
+            $id = $request->input('id_asesoria');
+            $asesoria = Asesoria::find($id);
+
+            if($asesoria){
+                if($asesoria->estatus==0){
+                    $asesoria->asesor_id = Auth::id();
+                    $asesoria->estatus = 1;
+                    $result = $asesoria->save();
+
+                    if($result){
+                    return view('mensajes.msj_correcto')->with("msj","Asesor&iacute;a registrada con exito");
+                    }else{
+                        return view('mensajes.msj_rechazado')->whith('msj',"No se pudo registrar la asesoría deseada"); 
+                    }                    
+                }else{
+                    return view('mensajes.msj_rechazado')->whith('msj',"No se pudo registrar la asesoría deseada. Probablemente alguien m&aacute;s la tom&oacute;...");
+                }
+            }else{
+                return view('mensajes.msj_rechazado')->whith('msj',"Nada que mostrar...");
+            }
+
+
+        }else{
+            return view('mensajes.msj_rechazado')->whith('msj',"No se quiera pasar de verga...");
+        }
+
+        
+    }
+
 }

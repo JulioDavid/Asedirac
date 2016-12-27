@@ -31,7 +31,10 @@ function cargarlistado(listado){
    })
 }
 
-
+function confirmarAsesoria(id){                               
+  $('#id_asesoria').val(id);
+  $('#confirmar_form').submit();
+}
 
 function mostrarficha(id_usuario) {  
   var url = "form_editar_usuario/"+id_usuario+""; 
@@ -79,7 +82,7 @@ $(document).on("submit","#f_nueva_asesoria",function(e){
         var formu=$(this);
         var quien=$(this).attr("id");
         
-        
+        if(quien=="confirmar_form"){ var varurl="asesorias/confirmar"; var divresul="contenido_principal";}
         if(quien=="f_editar_usuario"){ var varurl="editar_usuario"; var divresul="notificacion_resul_feu"; }
 
         $("#"+divresul+"").html($("#loading_section").html());

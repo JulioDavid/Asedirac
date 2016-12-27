@@ -32,6 +32,8 @@ Route::get('asesorias/por_pagar/{page?}', 'AsesoriasController@getPorPagar');
 Route::get('asesorias/concretadas/{page?}','AsesoriasController@getConcretadas');
 Route::get('asesorias/concluidas/{page?}', 'AsesoriasController@getConcluidas');
 
+Route::post('asesorias/confirmar','AsesoriasController@postConfirmarAsesoria');
+
 Route::get('form_editar_usuario/{id}','UsuariosController@form_editar_usuario');
 Route::post('editar_usuario','UsuariosController@editar_usuario');
 
