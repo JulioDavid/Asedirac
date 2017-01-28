@@ -177,13 +177,13 @@ desired effect
               <!-- Menu Footer-->
               <li class="user-footer">
                 <div class="pull-left">
-                  <a href="#" class="btn btn-default btn-flat">Ver Perfil</a>
+                  <a href="javascript:void(0);" onclick="mostrarficha({{Auth::user()->id}});" class="btn btn-default btn-flat">Perfil</a>
                 </div>
                 <div class="pull-right">
                   <a href="{{ url('/logout') }}" class="btn btn-default btn-flat"
                      onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
-                      {{ trans('adminlte_lang::message.signout') }}
+                      Salir
                   </a>
 
                   <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">

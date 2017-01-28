@@ -73,9 +73,10 @@ class UsuariosController extends Controller
           $usuario->estado = $data['estado'];
           $usuario->institucion= $data["institucion"];
           $usuario->carrera = $data["carrera"];
-          $usuario->email_tutor = $data["email_tutor"];
-          $usuario->nombre_tutor = $data["nombre_tutor"];
-
+          if($usuario->rol==0){
+            $usuario->email_tutor = $data["email_tutor"];
+            $usuario->nombre_tutor = $data["nombre_tutor"];
+          }
           $resul= $usuario->save();
 
        }
@@ -140,6 +141,15 @@ class UsuariosController extends Controller
             }
          }
       }
+   }
+
+
+   public function getAlumnos(){
+
+   }
+
+   public function getAsesores(){
+    
    }
 
 }

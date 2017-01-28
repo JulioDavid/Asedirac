@@ -30,9 +30,17 @@ Route::post('nueva_asesoria', 'AsesoriasController@nueva_asesoria');
 Route::get('asesorias/solicitadas/{page?}', 'AsesoriasController@getSolicitadas');
 Route::get('asesorias/por_pagar/{page?}', 'AsesoriasController@getPorPagar');
 Route::get('asesorias/concretadas/{page?}','AsesoriasController@getConcretadas');
+Route::get('asesorias/concluidas/{page?}', 'AsesoriasController@getConcluidas');
 
+Route::post('asesorias/confirmar','AsesoriasController@postConfirmarAsesoria');
+
+//Rutas para usuario
 Route::get('form_editar_usuario/{id}','UsuariosController@form_editar_usuario');
 Route::post('editar_usuario','UsuariosController@editar_usuario');
+
+Route::get('usuarios/alumnos/{id?}','UsuariosController@getAlumnos');
+Route::get('usuarios/asesores/{id?}','UsuariosController@getAsesores');
+
 
 Route::get('form_foto_perfil','UsuariosController@form_foto_perfil');
 Route::post('subir_foto_perfil','UsuariosController@subirImagen');
