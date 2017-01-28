@@ -26,8 +26,21 @@
                     background-color: black;
                 }
       .navbar{
+        font-size: 18px !important;
         background-color: white;
+        margin-bottom: 0;
+        padding-bottom: 3px;
+        border-bottom: 3px solid #e5e5e5;
+ 
       }
+      .navbar a {
+       /* display:block;*/
+        text-align:center;
+        width:180px; /* fixed width */
+        text-decoration:none; 
+
+        }
+      
          .carousel-control.right, .carousel-control.left {
                                   background-image: none;
                                   color: RebeccaPurple;
@@ -125,7 +138,7 @@
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li>
-              <a href="#proceso">Como funciona</a>
+              <a href="#proceso">¿Cómo funciona?</a>
             </li>
             <li>
               <a href="#materias">Materias</a>
@@ -136,7 +149,7 @@
             -->
             @if (Auth::guest())
                         <li><a href="{{ url('/login') }}">Ingresa</a></li>
-                        <li><a href="{{ url('/registro') }}">Reg&iacute;strate</a></li>
+                       <!-- <li><a href="{{ url('/registro') }}">Reg&iacute;strate</a></li>-->
             @else
                     <li><a href="/home">{{ Auth::user()->name }}</a></li>
             @endif
@@ -156,14 +169,14 @@
     <br>
     <br>  
     <div class="row">
-      <div class="col-md-12">
-        <div class="jumbotron text-center" style="border: 3px solid #e5e5e5;
+      <div class="col-md-12 center-block">
+        <!--<div class="jumbotron text-center" style="border: 3px solid #e5e5e5;
         background-image: url(IMG-WALL2.jpeg,);
         background-size: cover;  
               background-color:white;
               margin-left:30px;
               margin-right:30px;
-              height:600px;">
+              height:600px;">-->
           <h1 style="color: rgb(102, 51, 153);" class="text-center">Elije la materia, nosotros al experto</h1>
           <br>
           <h2 class="text-center text-muted">Asesorías particulares desde secundaria hasta universidad</h2>
@@ -171,11 +184,11 @@
           <br>
           <br>
           <br>
-          <a href="{{ url('/registro') }}" class="btn btn-info btn-lg" style="padding: 4px 14px;
+          <p class="text-center"><a href="{{ url('/registro') }}" class="btn btn-info btn-lg " style="padding: 4px 14px;
                                 font-size: 25px;
                                 ">
-                        Solicita tu asesoría</a>
-        </div>
+                        Solicita tu asesoría</a></p>
+        <!--JUMBOTRON ENDS</div>-->
       </div>
     </div>
     <br>
@@ -241,10 +254,10 @@
       </div>
     </div>
     <div class="section">
-      <div class="container-fluid" style="border: 3px solid #e5e5e5;">
+      <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <img src="{{url('assets/img/IMG3.png')}}" class="center-block img-circle img-responsive" width="264" height="264">
+            <img src="{{url('assets/img/IMG3.png')}}" class="center-block img-responsive" width="364" height="364">
           </div>
           <div class="col-md-6">
             <h1 style="color:RebeccaPurple;" class="text-left text-primary" contenteditable="true">Aprende</h1>
@@ -292,9 +305,7 @@
                 <br>Trigonometría
                 <br>
                 <br>
-                  <p class="text-primary">
-                    <i class="fa fa-5x fa-fw fa-connectdevelop"></i>
-                  </p>
+               <!--   <p class="text-primary"><i class="fa fa-5x fa-fw fa-connectdevelop"></i></p>-->
                 </h4>
               <br>
               <br>
@@ -313,9 +324,7 @@
                 <br>Trigonometría
                 <br>
                 <br>
-                  <p class="text-primary">
-                    <i class="fa fa-5x fa-fw fa-superscript"></i>
-                  </p>
+                  <!--<p class="text-primary"><i class="fa fa-5x fa-fw fa-superscript"></i></p>-->
               </h4>
             </div>
             <div class="col-md-3">
@@ -332,9 +341,7 @@
                 <br>Trigonometría
                 <br>
                 <br>
-                <p class="text-primary">
-                  <i class="fa fa-5x fa-fw fa-flask"></i>
-                </p>
+                <!--<p class="text-primary"><i class="fa fa-5x fa-fw fa-flask"></i></p>-->
                 </h4>
             </div>
             <div class="col-md-3">
@@ -351,9 +358,7 @@
                 <br>Trigonometría
                 <br>
                 <br>
-                <p class="text-primary">
-                  <i class="fa fa-5x fa-fw fa-code"></i>
-                </p>
+                <!--<p class="text-primary"><i class="fa fa-5x fa-fw fa-code"></i></p>-->
                 </h4>
             </div>
           </div>
@@ -446,7 +451,7 @@
     </div>
     <h1 class="text-center text-primary">Siguenos en:</h1>
     <b>
-    <div class="section slideanim">
+    <div class="section">
       <div class="container-fluid text-center">
         <div class="row text-center">
           <div class="col-xs-3 text-center">
@@ -476,13 +481,15 @@
               <br>
               <h4 class="text-center text-muted">
                 <br>
+                <br>contacto@asesoriasdirac.com<!--Poner pop-up de mail-->
+                <br>
+                <br><a title="5525726749" data-toggle ="popover" data-placement="top" data-content="5529604853"><i class="fa fa-3x fa-fw fa-whatsapp text-success"></i></a>
+                <a href="https://twitter.com/asesoriasdirac"><i class="fa fa-3x fa-fw fa-twitter text-info"></i></a>
+                <a href="https://www.facebook.com/asesoriasdirac/"><i class="fa fa-3x fa-fw fa-facebook"></i></a>
+                <a href="https://plus.google.com/+Asesor%C3%ADasdeF%C3%ADsicayMatemáticas"><i class="fa fa-3x fa-fw fa-google-plus hub text-danger"></i></a>
                 <br>
                 <br>
-                <b>contacto@asesoriasdirac.com<!--Poner pop-up de mail-->
                 <br>
-                <br>
-                <br>
-                </b>
               </h4>
               <b>
               <br>
