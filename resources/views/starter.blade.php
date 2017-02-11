@@ -179,7 +179,7 @@
               height:600px;">-->
           <h1 style="color: rgb(102, 51, 153);" class="text-center">Elije la materia, nosotros al experto</h1>
           <br>
-          <h2 class="text-center text-muted">Asesorías particulares desde secundaria hasta universidad</h2>
+          <h3 class="text-center text-muted">Asesorías particulares desde secundaria hasta universidad</h3>
           <br>
           <br>
           <br>
@@ -208,12 +208,10 @@
                         width=:264; height:214;">
           </div>
           <div class="col-md-6">
-            <h1 style="color:RebeccaPurple;" class="text-left text-primary" contenteditable="true">Solicita una asesoría</h1>
+            <h1 style="color:RebeccaPurple;" class="text-left text-primary" contenteditable="true">Solicita <br> una asesoría</h1>
             <br>
             <h4 class="text-muted">Busca tu tema. fecha, lugar y hora - Puedes encontrar
-              <br>
               <br>asesoría para cualquier tema o materia
-              <br>
               <br>
               <a>En donde damos asesorías presenciales</a>
             </h4>
@@ -230,14 +228,11 @@
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-6">
-            <h1 style="color:RebeccaPurple;" class="text-primary text-right">Espera tu confirmación</h1>
+            <h1 style="color:RebeccaPurple;" class="text-primary text-right">Espera <br>tu confirmación</h1>
             <br>
             <h4 class="text-muted text-right">En menos de 24 horas recibirás un correo con la confirmación y
-              <br>
               <br>el perfil de un asesor, con lo cual podrás pagar para asegurar
-              <br>
               <br>tu asesoría
-              <br>
               <br>
               <a>Materias disponibles</a>
             </h4>
@@ -261,14 +256,11 @@
           </div>
           <div class="col-md-6">
             <h1 style="color:RebeccaPurple;" class="text-left text-primary" contenteditable="true">Aprende</h1>
+            <br>
             <h4 class="text-muted">El aprendizaje individual es la mejor forma de aprender, por
-              <br>
               <br>ello asesorías Dirac te ofrece asesorías en línea, a domicilio o
-              <br>
               <br>en un lugar publico de tu preferencia para que tengas la
-              <br>
               <br>mejor experiencia aprendiendo.
-              <br>
               <br>
               <a>Quiero saber más</a>
             </h4>
@@ -282,7 +274,129 @@
     <br>
     <br>
     <br>
-    <div class="section" id="materias">
+      </div>
+    <div class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 style="color:RebeccaPurple;" class="text-center text-primary">Con el apoyo de</h1>
+            <div class="col-md-6">
+              <img src="{{url('assets/img/Banorte_Logo.png')}}" class="center-block img-responsive slideanim" style="height: 75px; ">
+            </div>
+            <div class="col-md-6" >
+              <img src="{{url('assets/img/SUM_Logo.png')}}" class="center-block img-responsive slideanim" style="height: 75px; ">
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    <div class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 style="color:RebeccaPurple;" class="text-center text-primary">¿Quién habla de nosotros?</h1>
+            <img src="{{url('assets/img/ElFinanciero_Logo.png')}}" class="center-block img-responsive slideanim" style="height: 75px; ">
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fasesoriasdirac%2Fposts%2F924552270956412&width=500" width="500" height="161" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> 
+
+
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fasesoriasdirac%2Fposts%2F728232097255098&width=500" width="500" height="179" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fluis.mCca%2Fposts%2F801225963321273%3A0&width=500" width="500" height="354" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+
+    <div class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 style="color:RebeccaPurple;" class="text-center text-primary">¿Qué dicen de nosotros?</h1>
+            
+            <br>
+            <br>
+            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+              <!-- Indicadores -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+              </ol>
+              <!-- Envoltorio para slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <h4>"Gran servicio, con disponibilidad y sus maestros con gran paciencia.
+                    Gracias por la ayuda!"
+                    <br>
+                    <span style="font-style:normal;">-Paola Heredia-</span>
+                  </h4>
+                </div>
+                <div class="item">
+                  <h4>"Muy buenas asesorías las recomiendo ampliamente"
+                    <br>
+                    <span style="font-style:normal;">-Ana Lucia DE Alba Magaña-</span>
+                  </h4>
+                </div>
+                <div class="item">
+                  <h4>"Me gustó mucho el servicio de Dirac ,
+                    <br>ya que puedo pedir mi asesoría cuando quiera dónde quiera, los recomendaría
+                    sin dudar."
+                    <br>
+                    <span style="font-style:normal;">-Anónimo-</span>
+                  </h4>
+                </div>
+              </div>
+              <!-- Controles IZQ, DER -->
+              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+<i class="icon-prev fa fa-angle-left"></i>
+            </a>
+              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+<i class="icon-next fa fa-angle-right"></i>
+            </a>
+            </div>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h1 class="text-center text-primary">¿Quieres saber más?</h1>
+    <b>
+    <div class="section">
+      <div class="container-fluid text-center">
+        <div class="row text-center">
+          <div class="col-xs-3 text-center">
+            <a title="5525726749" data-toggle ="popover" data-placement="top" data-content="5529604853"><i class="fa fa-5x fa-fw fa-whatsapp text-success"></i></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="https://twitter.com/asesoriasdirac"><i class="fa fa-5x fa-fw fa-twitter text-info"></i></a>
+          </div>
+          <div class="col-xs-3">
+            <a href="https://www.facebook.com/asesoriasdirac/"><i class="fa fa-5x fa-fw fa-facebook"></i></a>
+          </div>
+          <div class="col-xs-3 text-center">
+            <a href="https://plus.google.com/+Asesor%C3%ADasdeF%C3%ADsicayMatemáticas"><i class="fa fa-5x fa-fw fa-google-plus hub text-danger"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+      
+    
         <div class="container-fluid">
           <div class="row">
           <div class="col-md-12">
@@ -363,115 +477,6 @@
             </div>
           </div>
         </div>
-      </div>
-    <div class="section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 style="color:RebeccaPurple;" class="text-center text-primary">Con el apoyo de</h1>
-            <div class="col-md-6">
-              <img src="{{url('assets/img/Banorte_Logo.png')}}" class="center-block img-responsive slideanim">
-            </div>
-            <div class="col-md-6">
-              <img src="{{url('assets/img/SUM_Logo.png')}}" class="center-block img-responsive slideanim">
-            </div>
-            <br>
-          </div>
-        </div>
-      </div>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class="section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 style="color:RebeccaPurple;" class="text-center text-primary">¿Quién habla de nosotros?</h1>
-            <img src="{{url('assets/img/ElFinanciero_Logo.png')}}" class="center-block img-responsive slideanim">
-            <br>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-md-12">
-            <h1 style="color:RebeccaPurple;" class="text-center text-primary">¿Qué dicen de nosotros?</h1>
-            
-            <br>
-            <br>
-            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-              <!-- Indicadores -->
-              <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-              </ol>
-              <!-- Envoltorio para slides -->
-              <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                  <h4>"Gran servicio, con disponibilidad y sus maestros con gran paciencia.
-                    Gracias por la ayuda!"
-                    <br>
-                    <span style="font-style:normal;">-Paola Heredia-</span>
-                  </h4>
-                </div>
-                <div class="item">
-                  <h4>"Muy buenas asesorías las recomiendo ampliamente"
-                    <br>
-                    <span style="font-style:normal;">-Ana Lucia DE Alba Magaña-</span>
-                  </h4>
-                </div>
-                <div class="item">
-                  <h4>"Me gustó mucho el servicio de Dirac ,
-                    <br>ya que puedo pedir mi asesoría cuando quiera dónde quiera, los recomendaría
-                    sin dudar."
-                    <br>
-                    <span style="font-style:normal;">-Anónimo-</span>
-                  </h4>
-                </div>
-              </div>
-              <!-- Controles IZQ, DER -->
-              <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-<i class="icon-prev fa fa-angle-left"></i>
-            </a>
-              <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-<i class="icon-next fa fa-angle-right"></i>
-            </a>
-            </div>
-            <br>
-          </div>
-        </div>
-      </div>
-    </div>
-    <h1 class="text-center text-primary">Siguenos en:</h1>
-    <b>
-    <div class="section">
-      <div class="container-fluid text-center">
-        <div class="row text-center">
-          <div class="col-xs-3 text-center">
-            <a title="5525726749" data-toggle ="popover" data-placement="top" data-content="5529604853"><i class="fa fa-5x fa-fw fa-whatsapp text-success"></i></a>
-          </div>
-          <div class="col-xs-3">
-            <a href="https://twitter.com/asesoriasdirac"><i class="fa fa-5x fa-fw fa-twitter text-info"></i></a>
-          </div>
-          <div class="col-xs-3">
-            <a href="https://www.facebook.com/asesoriasdirac/"><i class="fa fa-5x fa-fw fa-facebook"></i></a>
-          </div>
-          <div class="col-xs-3 text-center">
-            <a href="https://plus.google.com/+Asesor%C3%ADasdeF%C3%ADsicayMatemáticas"><i class="fa fa-5x fa-fw fa-google-plus hub text-danger"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-      
       <div class="section" style="background-color:#e6e6e6;">
         <div class="container-fluid" >
           <div class="row">
