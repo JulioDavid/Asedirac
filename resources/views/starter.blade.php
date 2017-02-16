@@ -30,7 +30,7 @@
         background-color: white;
         margin-bottom: 0;
         padding-bottom: 3px;
-        border-bottom: 3px solid #e5e5e5;
+        border-bottom: 1px solid #e5e5e5;
  
       }
       .navbar a {
@@ -131,14 +131,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#" rel="home" title="Logo">
-        <img style="max-width:200px; margin-top: -7px;" src="{{url('assets/img/logohom-01.png')}}">
+          <a  href="#" rel="home" title="Logo">
+        <img style="max-width:200px; margin-top:10px;" src="{{url('assets/img/logohom-01.png')}}">
           </a>
         </div>
         <div class="collapse navbar-collapse" id="navbar-ex-collapse">
           <ul class="nav navbar-nav navbar-right">
             <li>
               <a href="#proceso">¿Cómo funciona?</a>
+            </li>
+            <li>
+              <a href="#referencias">¿Por qué nosotros?</a>
             </li>
             <li>
               <a href="#materias">Materias</a>
@@ -174,10 +177,10 @@
         background-image: url(IMG-WALL2.jpeg,);
         background-size: cover;  
               background-color:white;
-              margin-left:30px;
+              margin-left:30px; 
               margin-right:30px;
               height:600px;">-->
-          <h1 style="color: rgb(102, 51, 153);" class="text-center">Elije la materia, nosotros al experto</h1>
+          <h1 style="color: rgb(102, 51, 153); font-size: 60px;" class="text-center">Elije la materia, nosotros al experto</h1>
           <br>
           <h3 class="text-center text-muted">Asesorías particulares desde secundaria hasta universidad</h3>
           <br>
@@ -275,7 +278,7 @@
     <br>
     <br>
       </div>
-    <div class="section">
+    <div class="section" id="referencias">
       <div class="container-fluid">
         <div class="row">
           <div class="col-md-12">
@@ -301,7 +304,7 @@
         <div class="row">
           <div class="col-md-12">
             <h1 style="color:RebeccaPurple;" class="text-center text-primary">¿Quién habla de nosotros?</h1>
-            <img src="{{url('assets/img/ElFinanciero_Logo.png')}}" class="center-block img-responsive slideanim" style="height: 75px; ">
+            <img src="{{url('assets/img/ElFinanciero_Logo.png')}}" class="center-block img-responsive slideanim" style="height: 75px; width: 400px; ">
             <br>
           </div>
         </div>
@@ -317,7 +320,7 @@
 
 
 
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fluis.mCca%2Fposts%2F801225963321273%3A0&width=500" width="500" height="354" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fluis.mCca%2Fposts%2F801225963321273%3A0&width=500" width="500" height="180" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
 
 
@@ -348,7 +351,7 @@
                 <div class="item">
                   <h4>"Muy buenas asesorías las recomiendo ampliamente"
                     <br>
-                    <span style="font-style:normal;">-Ana Lucia DE Alba Magaña-</span>
+                    <span style="font-style:normal;">-Ana Lucia De Alba Magaña-</span>
                   </h4>
                 </div>
                 <div class="item">
@@ -373,7 +376,7 @@
         </div>
       </div>
     </div>
-    <h1 class="text-center text-primary">¿Quieres saber más?</h1>
+   <!--<h1 class="text-center text-primary">¿Quieres saber más?</h1>
     <b>
     <div class="section">
       <div class="container-fluid text-center">
@@ -392,8 +395,7 @@
           </div>
         </div>
       </div>
-    </div>
-
+    </div> -->
 
       
     
