@@ -268,7 +268,7 @@
               <a>Quiero saber más</a>
             </h4>
           </div>
-        </div>
+        </div>  
       </div>
     </div>
     <br>
@@ -313,14 +313,13 @@
 
 
 
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fasesoriasdirac%2Fposts%2F924552270956412&width=500" width="500" height="161" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> 
-
-
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fasesoriasdirac%2Fposts%2F728232097255098&width=500" width="500" height="179" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
 
 
 
-<iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fluis.mCca%2Fposts%2F801225963321273%3A0&width=500" width="500" height="180" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+
+
+
 
 
 
@@ -332,9 +331,9 @@
             
             <br>
             <br>
-            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
+            <div id="myCarousel" class="carousel slide text-center" data-ride="carousel" style="padding-bottom: 60px;">
               <!-- Indicadores -->
-              <ol class="carousel-indicators">
+              <ol class="carousel-indicators" style="position: absolute; bottom: 0; padding-top: 0;" >
                 <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                 <li data-target="#myCarousel" data-slide-to="1"></li>
                 <li data-target="#myCarousel" data-slide-to="2"></li>
@@ -342,25 +341,14 @@
               <!-- Envoltorio para slides -->
               <div class="carousel-inner" role="listbox">
                 <div class="item active">
-                  <h4>"Gran servicio, con disponibilidad y sus maestros con gran paciencia.
-                    Gracias por la ayuda!"
-                    <br>
-                    <span style="font-style:normal;">-Paola Heredia-</span>
-                  </h4>
+                 <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fasesoriasdirac%2Fposts%2F924552270956412&width=500" width="500" height="161" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe> 
                 </div>
                 <div class="item">
-                  <h4>"Muy buenas asesorías las recomiendo ampliamente"
-                    <br>
-                    <span style="font-style:normal;">-Ana Lucia De Alba Magaña-</span>
-                  </h4>
+                    <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fasesoriasdirac%2Fposts%2F728232097255098&width=500" width="500" height="179" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
                 </div>
                 <div class="item">
-                  <h4>"Me gustó mucho el servicio de Dirac ,
-                    <br>ya que puedo pedir mi asesoría cuando quiera dónde quiera, los recomendaría
-                    sin dudar."
-                    <br>
-                    <span style="font-style:normal;">-Anónimo-</span>
-                  </h4>
+                  <iframe src="https://www.facebook.com/plugins/post.php?href=https%3A%2F%2Fwww.facebook.com%2Fluis.mCca%2Fposts%2F801225963321273%3A0&width=500" width="500" height="180" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
                 </div>
               </div>
               <!-- Controles IZQ, DER -->
@@ -397,7 +385,24 @@
       </div>
     </div> -->
 
-      
+       <div class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12">
+            <h1 style="color:RebeccaPurple;" class="text-center text-primary">¿Quieres saber más?</h1>
+            
+            <br>
+             <p class="text-center"><a href="{{ url('/registro') }}" class="btn btn-info btn-lg " style="padding: 4px 14px;
+                                font-size: 25px;
+                                ">
+                        Ve nuestro precios</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
     
         <div class="container-fluid">
           <div class="row">
@@ -553,6 +558,12 @@
         <p class="text-primary">Volver a Inicio</p>
         
       </footer>
+  
+        
+        
+
+    
+      
       
 <script>
   $(document).ready(function(){
